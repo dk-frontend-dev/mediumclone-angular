@@ -3,12 +3,12 @@ import {catchError, map, switchMap, tap} from 'rxjs/operators'
 import {createEffect, ofType, Actions} from '@ngrx/effects'
 import {Injectable} from '@angular/core'
 import {of} from 'rxjs'
+import {Router} from '@angular/router'
 
 import {AuthService} from './../../services/auth.service'
 import {loginAction, loginFailureAction, loginSuccesAction} from './../actions/login.action'
 import {CurrentUserInterface} from 'src/app/shared/types/current-user.interface'
 import {PersistanceService} from './../../../shared/services/persistance.service'
-import {Router} from '@angular/router'
 
 @Injectable()
 export class LoginEffect {
