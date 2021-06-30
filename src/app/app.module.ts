@@ -7,6 +7,7 @@ import {EffectsModule} from '@ngrx/effects'
 import {AppRoutingModule} from '@/app-routing.module'
 import {AppComponent} from '@/app.component'
 import {AuthModule} from '@/auth/auth.module'
+import {GlobalFeedModule} from '@/global-feed/global-feed.module'
 import {TopbarModule} from '@shared/modules/topbar/topbar.module'
 import {PersistanceService} from '@shared/services/persistance.service'
 import {AuthInterseptorService} from '@shared/services/auth-interseptor.service'
@@ -18,6 +19,7 @@ import {environment} from '@environments/environment.prod'
     BrowserModule,
     AppRoutingModule,
     AuthModule,
+    GlobalFeedModule,
     StoreDevtoolsModule.instrument({
       maxAge: 20,
       logOnly: environment.production
