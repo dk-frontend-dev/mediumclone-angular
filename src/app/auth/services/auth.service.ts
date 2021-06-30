@@ -12,8 +12,6 @@ import {environment} from '@environments/environment'
 import {CurrentUserInterface} from '@shared/types/current-user.interface'
 @Injectable()
 export class AuthService {
-  constructor(private http: HttpClient) {}
-
   getUser(response: AuthResponseInterface): CurrentUserInterface {
     return response.user
   }
@@ -32,4 +30,6 @@ export class AuthService {
     const url = `${environment.apiUrl}/user`
     return this.http.get<AuthResponseInterface>(url).pipe(map(this.getUser))
   }
+
+  constructor(private http: HttpClient) {}
 }

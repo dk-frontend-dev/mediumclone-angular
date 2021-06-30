@@ -15,11 +15,11 @@ export class TopbarComponent implements OnInit {
   isAnonymous$!: Observable<boolean>
   currentUser$!: Observable<CurrentUserInterface | null>
 
-  constructor(private store: Store) {}
-
   ngOnInit(): void {
     this.isLoggedIn$ = this.store.pipe(select(isLoggedInSelector))
     this.isAnonymous$ = this.store.pipe(select(isAnonymousSelector))
     this.currentUser$ = this.store.pipe(select(currentUserSelector))
   }
+
+  constructor(private store: Store) {}
 }

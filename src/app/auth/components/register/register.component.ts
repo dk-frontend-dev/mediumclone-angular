@@ -18,8 +18,6 @@ export class RegisterComponent implements OnInit {
   isSubmitting$!: Observable<boolean>
   backendErrors$!: Observable<BackendErrorsInterface | any>
 
-  constructor(private fb: FormBuilder, private store: Store, private authService: AuthService) {}
-
   ngOnInit(): void {
     this.initializeFrom()
     this.initializeValues()
@@ -41,4 +39,6 @@ export class RegisterComponent implements OnInit {
   onSubmit(): void {
     this.store.dispatch(registerAction({request: this.form.value}))
   }
+
+  constructor(private fb: FormBuilder, private store: Store, private authService: AuthService) {}
 }

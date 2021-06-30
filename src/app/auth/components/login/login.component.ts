@@ -17,8 +17,6 @@ export class LoginComponent implements OnInit {
   isSubmitting$!: Observable<boolean>
   backendErrors$!: Observable<BackendErrorsInterface | any>
 
-  constructor(private fb: FormBuilder, private store: Store) {}
-
   ngOnInit(): void {
     this.initializeFrom()
     this.initializeValues()
@@ -39,4 +37,6 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     this.store.dispatch(loginAction({request: this.form.value}))
   }
+
+  constructor(private fb: FormBuilder, private store: Store) {}
 }
