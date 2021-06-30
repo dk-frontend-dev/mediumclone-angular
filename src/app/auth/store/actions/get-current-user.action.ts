@@ -1,7 +1,7 @@
 import {createAction, props} from '@ngrx/store'
 
-import {CurrentUserInterface} from 'src/app/shared/types/current-user.interface'
-import {ActionTypes} from './../action-types'
+import {CurrentUserInterface} from '@shared/types/current-user.interface'
+import {ActionTypes} from '@/auth/store/action-types'
 
 export const getCurrentUserAction = createAction(ActionTypes.GET_CURRENT_USER)
 

@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core'
 
-import {BackendErrorsInterface} from 'src/app/shared/types/backend-errors.interface'
+import {BackendErrorsInterface} from '@shared/types/backend-errors.interface'
 
 @Component({
   selector: 'mc-backend-error-messages',

@@ -1,16 +1,15 @@
-import {RegisterComponent} from 'src/app/auth/components/register/register.component'
 import {Injectable} from '@angular/core'
 import {Observable} from 'rxjs'
 import {HttpClient} from '@angular/common/http'
 import {map} from 'rxjs/operators'
 
-import {environment} from 'src/environments/environment'
-import {CurrentUserInterface} from 'src/app/shared/types/current-user.interface'
-import {RegisterRequestInterface} from '../types/register-request.interface'
-import {AuthResponseInterface} from './../types/auth-response.interface'
-import {LoginComponent} from './../components/login/login.component'
-import {LoginRequestInterface} from './../types/login-request.interface'
-
+import {RegisterRequestInterface} from '@/auth/types/register-request.interface'
+import {AuthResponseInterface} from '@/auth/types/auth-response.interface'
+import {LoginComponent} from '@/auth/components/login/login.component'
+import {LoginRequestInterface} from '@/auth/types/login-request.interface'
+import {RegisterComponent} from '@/auth/components/register/register.component'
+import {environment} from '@environments/environment'
+import {CurrentUserInterface} from '@shared/types/current-user.interface'
 @Injectable()
 export class AuthService {
   constructor(private http: HttpClient) {}

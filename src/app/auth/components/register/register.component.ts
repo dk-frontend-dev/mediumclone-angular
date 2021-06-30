@@ -3,10 +3,10 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms'
 import {select, Store} from '@ngrx/store'
 import {Observable} from 'rxjs'
 
-import {AuthService} from '../../services/auth.service'
-import {registerAction} from './../../store/actions/register.action'
-import {isSubmittingSelector, validationErrorsSelector} from './../../store/selectors'
-import {BackendErrorsInterface} from 'src/app/shared/types/backend-errors.interface'
+import {AuthService} from '@/auth/services/auth.service'
+import {registerAction} from '@/auth/store/actions/register.action'
+import {isSubmittingSelector, validationErrorsSelector} from '@/auth/store/selectors'
+import {BackendErrorsInterface} from '@shared/types/backend-errors.interface'
 
 @Component({
   selector: 'mc-register',

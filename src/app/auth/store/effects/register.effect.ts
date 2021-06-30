@@ -5,14 +5,14 @@ import {HttpErrorResponse} from '@angular/common/http'
 import {of} from 'rxjs'
 import {Router} from '@angular/router'
 
-import {AuthService} from './../../services/auth.service'
-import {CurrentUserInterface} from 'src/app/shared/types/current-user.interface'
-import {PersistanceService} from 'src/app/shared/services/persistance.service'
+import {AuthService} from '@/auth/services/auth.service'
+import {CurrentUserInterface} from '@shared/types/current-user.interface'
+import {PersistanceService} from '@shared/services/persistance.service'
 import {
   registerAction,
   registerFailureAction,
   registerSuccesAction
-} from './../actions/register.action'
+} from '@/auth/store/actions/register.action'
 
 @Injectable()
 export class RegisterEffect {

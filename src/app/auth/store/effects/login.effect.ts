@@ -5,10 +5,10 @@ import {Injectable} from '@angular/core'
 import {of} from 'rxjs'
 import {Router} from '@angular/router'
 
-import {AuthService} from './../../services/auth.service'
-import {loginAction, loginFailureAction, loginSuccesAction} from './../actions/login.action'
-import {CurrentUserInterface} from 'src/app/shared/types/current-user.interface'
-import {PersistanceService} from './../../../shared/services/persistance.service'
+import {AuthService} from '@/auth/services/auth.service'
+import {loginAction, loginFailureAction, loginSuccesAction} from '@/auth/store/actions/login.action'
+import {CurrentUserInterface} from '@shared/types/current-user.interface'
+import {PersistanceService} from '@shared/services/persistance.service'
 
 @Injectable()
 export class LoginEffect {
