@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 import {select, Store} from '@ngrx/store'
 import {Observable, Subscription} from 'rxjs'
-import {ActivatedRoute, Params, Router} from '@angular/router'
-import {parseUrl} from 'query-string'
+import {ActivatedRoute, Router} from '@angular/router'
 
 import {popularTagsAction} from '@shared/modules/popular-tags/store/actions/popular-tags.action'
 import {PopularTagType} from '@shared/types/popular-tag.type'
@@ -18,7 +17,7 @@ import {
   styleUrls: ['./popular-tags.component.scss']
 })
 export class PopularTagsComponent implements OnInit {
-  popularTags$!: Observable<PopularTagType | null>
+  popularTags$!: Observable<PopularTagType[] | null>
   isLoading$!: Observable<boolean>
   error$!: Observable<boolean>
   page$!: number
@@ -28,19 +27,10 @@ export class PopularTagsComponent implements OnInit {
     this.popularTags$ = this.store.pipe(select(popularTagsSelector))
     this.isLoading$ = this.store.pipe(select(isLoadingSelector))
     this.error$ = this.store.pipe(select(errorSelector))
-    const parsedUrl = parseUrl(this.router.url)
-    this.page$ = Number(parsedUrl.query.page) ?? 1
-  }
-
-  initializeListeners(): void {
-    this.queryParamsSubscription = this.route.queryParams.subscribe((params: Params) => {
-      this.page$ = Number(params.page || 1)
-    })
   }
 
   ngOnInit(): void {
     this.initializeValues()
-    this.initializeListeners()
     this.store.dispatch(popularTagsAction())
   }
 

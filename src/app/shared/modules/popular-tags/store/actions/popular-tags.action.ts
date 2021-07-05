@@ -9,5 +9,5 @@ export const popularTagsFailureAction = createAction(ActionTypes.POPULAR_TAGS_FA
 
 export const popularTagsSuccesAction = createAction(
   ActionTypes.POPULAR_TAGS_SUCCES,
-  props<{popularTags: PopularTagType}>()
+  props<{popularTags: PopularTagType[]}>()
 )

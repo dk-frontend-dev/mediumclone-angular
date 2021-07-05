@@ -8,8 +8,7 @@
       <a 
         class="tag-default tag-pill" 
         *ngFor="let tag of (popularTags$ | async)"
-        [routerLink]="['/tag']" 
-        [queryParams]="{page: page$, tag: tag}">
+        [routerLink]="['/tags', tag]">
           {{tag}}
       </a>
     </ng-container>

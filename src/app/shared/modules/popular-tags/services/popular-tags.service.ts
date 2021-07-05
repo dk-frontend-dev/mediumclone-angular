@@ -9,11 +9,11 @@ import {PopularTagType} from '@shared/types/popular-tag.type'
 
 @Injectable()
 export class PopularTagsService {
-  getTags(response: PopularTagsResponseInterface): PopularTagType {
+  getTags(response: PopularTagsResponseInterface): PopularTagType[] {
     return response.tags
   }
 
-  tags(): Observable<PopularTagType> {
+  tags(): Observable<PopularTagType[]> {
     const url = `${environment.apiUrl}/tags`
     return this.http.get<PopularTagsResponseInterface>(url).pipe(map(this.getTags))
   }
