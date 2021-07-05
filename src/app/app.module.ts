@@ -3,6 +3,8 @@ import {BrowserModule} from '@angular/platform-browser'
 import {StoreDevtoolsModule} from '@ngrx/store-devtools'
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import {EffectsModule} from '@ngrx/effects'
+import {StoreModule} from '@ngrx/store'
+import {routerReducer, StoreRouterConnectingModule} from '@ngrx/router-store'
 
 import {AppRoutingModule} from '@/app-routing.module'
 import {AppComponent} from '@/app.component'
@@ -20,6 +22,10 @@ import {environment} from '@environments/environment.prod'
     AppRoutingModule,
     AuthModule,
     GlobalFeedModule,
+    StoreModule.forRoot({
+      router: routerReducer
+    }),
+    StoreRouterConnectingModule.forRoot(),
     StoreDevtoolsModule.instrument({
       maxAge: 20,
       logOnly: environment.production

@@ -11,6 +11,7 @@ import {FeedService} from '@shared/modules/feed/services/feed.service'
 import {ErrorMessageModule} from '@shared/modules/error-message/error-message.module'
 import {LoadingModule} from '@shared/modules/loading/loading.module'
 import {PaginationModule} from '@shared/modules/pagination/pagination.module'
+import {TagListModule} from '@shared/modules/tag-list/tag-list.module'
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import {PaginationModule} from '@shared/modules/pagination/pagination.module'
     ErrorMessageModule,
     LoadingModule,
     PaginationModule,
+    TagListModule,
     EffectsModule.forFeature([GetFeedEffect]),
     StoreModule.forFeature('feed', reducers)
   ],

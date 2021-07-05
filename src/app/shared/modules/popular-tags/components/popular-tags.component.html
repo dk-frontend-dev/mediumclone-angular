@@ -1,0 +1,17 @@
+<div class="sidebar">
+  <p>Popular tags</p>
+
+  <div class="tag-list" ng-show="$ctrl.tags">
+    <mc-loading *ngIf="(isLoading$ | async)"></mc-loading>
+    <p *ngIf="(error$ | async)">Error!</p>
+    <ng-container *ngIf="(popularTags$ | async)">
+      <a 
+        class="tag-default tag-pill" 
+        *ngFor="let tag of (popularTags$ | async)"
+        [routerLink]="['/tag']" 
+        [queryParams]="{page: page$, tag: tag}">
+          {{tag}}
+      </a>
+    </ng-container>
+  </div>
+</div>
