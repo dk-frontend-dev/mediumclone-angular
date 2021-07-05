@@ -20,6 +20,7 @@ import {
 })
 export class FeedComponent implements OnInit, OnDestroy {
   @Input('apiUrl') apiUrlProps!: string
+
   isLoading$!: Observable<boolean>
   error$!: Observable<string | null>
   feed$!: Observable<GetFeedResponseInterface | null>
