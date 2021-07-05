@@ -2,7 +2,7 @@ import {CommonModule} from '@angular/common'
 import {NgModule} from '@angular/core'
 import {RouterModule} from '@angular/router'
 
-import {PaginationComponent} from '@shared/modules/pagination/components/pagination.component'
+import {PaginationComponent} from '@/shared/modules/pagination/components/pagination/pagination.component'
 import {UtilsService} from '@shared/services/utils.service'
 
 @NgModule({

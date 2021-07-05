@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core'
 import {EffectsModule} from '@ngrx/effects'
 import {RouterModule} from '@angular/router'
 
-import {FeedComponent} from '@shared/modules/feed/components/feed.component'
+import {FeedComponent} from '@/shared/modules/feed/components/feed/feed.component'
 import {GetFeedEffect} from '@shared/modules/feed/store/effects/get-feed.effect'
 import {reducers} from '@shared/modules/feed/store/reducers'
 import {FeedService} from '@shared/modules/feed/services/feed.service'

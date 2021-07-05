@@ -5,7 +5,7 @@ import {EffectsModule} from '@ngrx/effects'
 import {RouterModule} from '@angular/router'
 
 import {PopularTagsService} from '@shared/modules/popular-tags/services/popular-tags.service'
-import {PopularTagsComponent} from '@shared/modules/popular-tags/components/popular-tags.component'
+import {PopularTagsComponent} from '@/shared/modules/popular-tags/components/popular-tags/popular-tags.component'
 import {reducers} from '@shared/modules/popular-tags/store/reducers'
 import {GetPopularTagsEffect} from '@shared/modules/popular-tags/store/effects/get-popular-tags.effect'
 import {LoadingModule} from '@shared/modules/loading/loading.module'

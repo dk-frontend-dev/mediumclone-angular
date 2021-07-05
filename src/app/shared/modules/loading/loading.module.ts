@@ -1,7 +1,7 @@
 import {CommonModule} from '@angular/common'
 import {NgModule} from '@angular/core'
 
-import {LoadingComponent} from '@shared/modules/loading/components/loading.component'
+import {LoadingComponent} from '@/shared/modules/loading/components/loading/loading.component'
 
 @NgModule({
   imports: [CommonModule],

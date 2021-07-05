@@ -2,7 +2,7 @@ import {CommonModule} from '@angular/common'
 import {NgModule} from '@angular/core'
 import {RouterModule} from '@angular/router'
 
-import {FeedTogglerComponent} from '@shared/modules/feed-toggler/components/feed-toggler.component'
+import {FeedTogglerComponent} from '@/shared/modules/feed-toggler/components/feed-toggler/feed-toggler.component'
 
 @NgModule({
   imports: [CommonModule, RouterModule],
