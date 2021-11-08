@@ -5,13 +5,17 @@ import {FeedStateInterface} from '@shared/modules/feed/types/feed-state.interfac
 import {
   getFeedAction,
   getFeedSuccesAction,
-  getFeedFailureAction
+  getFeedFailureAction,
+  getCompanyesInfoAction,
+  getCompanyesInfoSuccessAction,
+  getCompanyesInfoFailureAction
 } from '@shared/modules/feed/store/actions/get-feed.action'
 
 const initialState: FeedStateInterface = {
   isLoading: false,
   error: null,
-  data: null
+  data: null,
+  companyesInfo: null
 }
 
 const feedReducer = createReducer(
@@ -43,6 +47,27 @@ const feedReducer = createReducer(
     (): FeedStateInterface => ({
       ...initialState,
       isLoading: true
+    })
+  ),
+  on(
+    getCompanyesInfoAction,
+    (state): FeedStateInterface => ({
+      ...state,
+      companyesInfo: null
+    })
+  ),
+  on(
+    getCompanyesInfoSuccessAction,
+    (state, action): FeedStateInterface => ({
+      ...state,
+      companyesInfo: action.companyesInfo
+    })
+  ),
+  on(
+    getCompanyesInfoFailureAction,
+    (state): FeedStateInterface => ({
+      ...state,
+      companyesInfo: null
     })
   )
 )

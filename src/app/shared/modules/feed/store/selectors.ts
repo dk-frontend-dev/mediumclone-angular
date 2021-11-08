@@ -18,3 +18,8 @@ export const feedSelector = createSelector(
   feedFeatureSelector,
   (feedState: FeedStateInterface) => feedState.data
 )
+
+export const companyesInfoSelector = createSelector(
+  feedFeatureSelector,
+  (feedState: FeedStateInterface) => feedState.companyesInfo
+)

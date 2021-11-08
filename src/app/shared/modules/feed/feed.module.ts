@@ -12,6 +12,7 @@ import {ErrorMessageModule} from '@shared/modules/error-message/error-message.mo
 import {LoadingModule} from '@shared/modules/loading/loading.module'
 import {PaginationModule} from '@shared/modules/pagination/pagination.module'
 import {TagListModule} from '@shared/modules/tag-list/tag-list.module'
+import {CompanyesInfoComponent} from './components/companyes-info/companyes-info.component'
 
 @NgModule({
   imports: [
@@ -24,8 +25,8 @@ import {TagListModule} from '@shared/modules/tag-list/tag-list.module'
     EffectsModule.forFeature([GetFeedEffect]),
     StoreModule.forFeature('feed', reducers)
   ],
-  declarations: [FeedComponent],
-  exports: [FeedComponent],
+  declarations: [FeedComponent, CompanyesInfoComponent],
+  exports: [FeedComponent, CompanyesInfoComponent],
   providers: [FeedService]
 })
 export class FeedModule {}

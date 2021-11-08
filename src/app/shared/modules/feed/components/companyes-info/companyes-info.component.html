@@ -1,0 +1,9 @@
+<h1>companyes info is work!</h1>
+
+<ng-container *ngIf="companyesInfo$ | async as companyesInfo">
+  <p *ngFor="let item of companyesInfo | keyvalue">
+    <b>{{ item.key }}</b>
+    &nbsp;
+    <span>{{ item.value }}</span>
+  </p>
+</ng-container>
